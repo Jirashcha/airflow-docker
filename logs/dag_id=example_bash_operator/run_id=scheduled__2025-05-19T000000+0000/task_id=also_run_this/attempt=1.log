@@ -1,0 +1,31 @@
+[2025-05-20T14:59:58.214+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-05-20T14:59:58.510+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: example_bash_operator.also_run_this scheduled__2025-05-19T00:00:00+00:00 [queued]>
+[2025-05-20T14:59:58.530+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: example_bash_operator.also_run_this scheduled__2025-05-19T00:00:00+00:00 [queued]>
+[2025-05-20T14:59:58.532+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2025-05-20T14:59:58.564+0000] {taskinstance.py:2907} INFO - Executing <Task(BashOperator): also_run_this> on 2025-05-19 00:00:00+00:00
+[2025-05-20T14:59:58.608+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=735) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-20T14:59:58.659+0000] {standard_task_runner.py:72} INFO - Started process 754 to run task
+[2025-05-20T14:59:58.657+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'example_bash_operator', 'also_run_this', 'scheduled__2025-05-19T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', '/home/***/.local/lib/python3.12/site-packages/***/example_dags/example_bash_operator.py', '--cfg-path', '/tmp/tmpr6t0jvml']
+[2025-05-20T14:59:58.666+0000] {standard_task_runner.py:105} INFO - Job 3: Subtask also_run_this
+[2025-05-20T14:59:59.226+0000] {task_command.py:467} INFO - Running <TaskInstance: example_bash_operator.also_run_this scheduled__2025-05-19T00:00:00+00:00 [running]> on host b61be9786ea3
+[2025-05-20T14:59:59.542+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='example_bash_operator' AIRFLOW_CTX_TASK_ID='also_run_this' AIRFLOW_CTX_EXECUTION_DATE='2025-05-19T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-19T00:00:00+00:00'
+[2025-05-20T14:59:59.553+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-05-20T14:59:59.558+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-05-20T14:59:59.562+0000] {logging_mixin.py:190} INFO - Current task name:also_run_this state:running start_date:2025-05-20 14:59:58.512503+00:00
+[2025-05-20T14:59:59.565+0000] {logging_mixin.py:190} INFO - Dag name:example_bash_operator and current dag run status:running
+[2025-05-20T14:59:59.569+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2025-05-20T14:59:59.574+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-05-20T14:59:59.576+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'echo "ti_key=example_bash_operator__also_run_this__20250519"']
+[2025-05-20T14:59:59.604+0000] {subprocess.py:99} INFO - Output:
+[2025-05-20T14:59:59.605+0000] {subprocess.py:106} INFO - ti_key=example_bash_operator__also_run_this__20250519
+[2025-05-20T14:59:59.606+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-05-20T14:59:59.652+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2025-05-20T14:59:59.654+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=example_bash_operator, task_id=also_run_this, run_id=scheduled__2025-05-19T00:00:00+00:00, execution_date=20250519T000000, start_date=20250520T145958, end_date=20250520T145959
+[2025-05-20T14:59:59.679+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-05-20T14:59:59.680+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-05-20T14:59:59.681+0000] {logging_mixin.py:190} INFO - Dag name:example_bash_operator queued_at:2025-05-20 14:59:42.243017+00:00
+[2025-05-20T14:59:59.682+0000] {logging_mixin.py:190} INFO - Task hostname:b61be9786ea3 operator:BashOperator
+[2025-05-20T14:59:59.701+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-05-20T14:59:59.717+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
